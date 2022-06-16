@@ -1,0 +1,109 @@
+body{
+    background-color: #e3e7eb;
+    font-family: Poppins;
+}
+nav {
+    background-color: #111727 !important;
+    height: 7vh;
+}
+.navbar-collapse{
+    background-color: #f8f9fa !important
+}
+
+.bg-blackc{
+    background-color: #111727 !important;
+    color: white;
+}
+
+.side1{
+    height: 125vh;
+}
+
+.container-homecard{
+    background-color: #fff;
+    width: 960px;
+}
+.contactbt{
+    border-radius: 20px;
+    padding: 6px 25px;
+    background-color: #111727;
+    text-decoration: none;
+    color: #effffd;
+}
+.logo{
+    margin: 48px auto;
+    display: flex;
+}
+.logo img{
+    width: 36px;
+}
+
+.left{
+    width: 75%;
+}
+.right{
+    width: 25%;
+    padding-left: 40px;
+}
+.left .description{
+    margin-bottom: 10px;
+}
+.downloadcv{
+    font-weight: bold;
+    text-decoration: none;
+    color: #180a0a;
+}
+.downloadcv img{
+width: 16px;
+margin-left: 8px;
+}
+
+.card {
+    position: static;
+}
+.card-icon-container{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.card-icon-container i {
+    margin-left: 16px;
+    margin-right: 16px;
+    font-size: 24pt;
+    
+}
+.card-icon-container .true {
+    display: inline-block;
+}
+
+.card-icon-container .false {
+    display: none;
+}
+
+form{
+    width: 480px;
+}
+
+.container-form{
+    height: 93vh;
+
+}
+.checkbox{
+    max-width: 50%;
+    width: 100%;
+}
+.checkbox-label{
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+}
+.checkbox-container{
+    display: flex;
+    margin: 0px;
+}
+.form-label{
+    font-weight: bold;
+
+}
