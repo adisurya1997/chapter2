@@ -1,0 +1,90 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://kit.fontawesome.com/27adedd565.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg  bg-light p-1">
+        <div class="container">
+          <img src="../assets/image/logo.png" alt="logo">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse p-0 mx-5" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <a class="navbar-brand" href="/">Home</a>
+                {{#if isLogin}}
+                <a class="navbar-brand" href="/addproject">Add Project</a>
+                {{/if}}
+            </ul>
+            
+                <button type="button" class="btn bg-blackc  me-2"><a class="text-decoration-none text-light" href="/contact">Contact me</a></button>
+          </div>
+        </div>
+    </nav>
+    <div class="side1 container-fluid d-flex justify-content-center align-items-center">
+        <div class="container-homecard d-flex p-5 m-5 rounded shadow-lg">
+            <div class="left">
+                <div>
+                    <div class="description">
+                        <h1>Hi Welcome to my hut </h1>
+                        <p style="text-align: justify; margin-block-end: 2em;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dicta molestias doloribus placeat tenetur sint totam odio eaque id saepe enim quasi officia ipsam perspiciatis natus a ut neque, perferendis necessitatibus voluptates atque optio velit ea! Sed impedit beatae debitis fuga, dolorem quisquam esse reiciendis iste deserunt. Doloribus deleniti ducimus itaque nam, sed et dolorem quod voluptates laboriosam a ipsa, reprehenderit assumenda recusandae. Natus excepturi officia asperiores aliquid veritatis fugiat neque reiciendis, sit dolorem, iste id quas tenetur delectus voluptates!</p>
+                        <a class="contactbt" href="/contact">Contact</a>
+                    </div>
+                    <a href="https://www.google.com" class="downloadcv" >download CV<img width="16px" style="margin-left: 8px ;" src="../assets/image/cv.png"></a>
+                    <div class="logo"> 
+                        <a href="https://www.linkedin.com" ><img style="margin-right: 16px"  src="../assets/image/in.png" ></a>
+                        <a href="https://www.instagram.com/"><img style="margin-right: 16px"  src="../assets/image/ig.png"></a>
+                        <a href="https://www.facebook.com/"><img style="margin-right: 16px"  src="../assets/image/fb.png"></a>
+                        <a href="https://www.twitter.com//"><img  src="../assets/image/twt.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <div class="card shadow-lg">
+                        <img src="../assets/image/profile.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title">Adi Surya Basri</h5>
+                        <p class="card-text">FullStack Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="side2 container-fluid justify-content-center align-item-center bg-light py-3">
+        <h1 class="blog-title-post fw-bold  text-center mt-5">MY PROJECT</h1>
+        <div class="row row-cols-1 row-cols-md-3 mt-5 g-4">
+            <div class="col">
+              <div class="card h-100">
+                <img src="https://cdn0-production-images-kly.akamaized.net/XXLs0zetMBHQgDoIM8CSeVrzE58=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/921472/original/029028900_1436263117-ultraman-background-hd.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-content-subtitle">Durasi: 2 Bulan</p>
+                    <p class="card-text my-3">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer. <a href="/project-detail">Read more...</a></p>
+                    <div class="card-icon-container">
+                            <i class="fa-brands fa-node-js true"></i>
+                            <i class="fa-brands fa-react false"></i>
+                            <i class="fa-brands fa-android true"></i>
+                            <i class="fa-brands fa-js-square true"></i>
+                    </div>
+                    <div class="row my-3">
+                    <button type="button mx-3" class="btn btn-primary col-6 rounded-pill">Edit</button>
+                    <button type="button mx-3" class="btn btn-danger col-6 rounded-pill">Delete</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
