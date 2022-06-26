@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script src="https://kit.fontawesome.com/27adedd565.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  bg-light p-1">
+        <div class="container">
+          <img src="../assets/image/logo.png" alt="logo">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse p-0 mx-5" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <a class="navbar-brand" href="/">Home</a>
+                {{#if isLogin}}
+                <a class="navbar-brand" href="/addproject">Add Project</a>
+                {{/if}}
+            </ul>
+                {{#if isLogin}}
+                <a href="#" class="navbar-brand">Hallo, {{user.name}}</a>
+                <a href="/logout" class="navbar-brand">Logout</a>  
+                {{else}}
+                <a class="navbar-brand" href="/register">Register</a>
+                <a class="navbar-brand" href="/login">Login</a>
+                {{/if}}
+                <button type="button" class="btn bg-blackc me-2"><a class="text-decoration-none text-light" href="/contact">Contact me</a></button>
+          </div>
+        </div>
+    </nav>
+    <div class="container-fluid d-flex justify-content-center align-items-center">
+        <div class="container-form">
+            <h2 class="text-center my-5">Add My Project</h2>
+            <form action="/addproject/{{index}}" method="POST" enctype="multipart/form-data">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Name</label>
+                    <input class="form-control" placeholder="Full Name" type="text" id="inputtitle" name="inputtitle">
+                </div>
+                <div class="row mb-3">
+                    <div class="col-6">
+                        <label for="exampleFormControlInput1" class="form-label">Start Date</label>
+                        <input class="form-control" type="date" id="inputprojectstartdate" name="inputprojectstartdate" class="form-input">
+                    </div>
+                    <div class="col-6">
+                        <label for="exampleFormControlInput1" class="form-label">End Date</label>
+                        <input class="form-control" type="date" id="inputprojectenddate" name="inputprojectenddate" class="form-input">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Your Message</label>
+                    <textarea class="form-control" placeholder="type your message" id="inputmessage" name="inputmessage" rows="3"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Technologies</label>
+                    <div class="checkbox-container">
+                        <div class="checkbox">
+                            <label for="nodejs" class="checkbox-label"><input type="checkbox" id="nodejs" name="nodejs" value="fa-brands fa-node-js">Node
+                                Js</label>
+                            <label for="reactjs" class="checkbox-label"><input type="checkbox" id="reactjs" name="reactjs" value="fa-brands fa-react">React
+                                Js</label>
+                        </div>
+                        <div class="checkbox">
+                            <label for="android" class="checkbox-label"><input type="checkbox" id="android" name="android" value="fa-brands fa-android">Android</label>
+                            <label for="javascript" class="checkbox-label"><input type="checkbox" id="javascript" name="javascript" value="fa-brands fa-js-square">Typescript</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Upload Image</label>
+                    <input type="file" class="form-control" id="inputImage" name="inputImage" >
+                </div>
+                <div class="mb-3">
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
