@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Project</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="../assets/css/detail.css">
+    <link rel="icon" href="https://www.filepicker.io/api/file/mWcP190oTCqiAo5VjrE8" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/27adedd565.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <img src="../assets/image/logo.png" alt="logo">
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                {{#if isLogin}}
+                <li>
+                    <a href="/addprojectl">Add Project</a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+
+        <div class="nav-right">
+            <a href="/contact">Contact Me</a>
+        </div>
+
+    </nav>
+
+    <div class="blog-post">
+        <h1 class="blog-title-post">{{this.title}}</h1>
+        <div class="row blog-summary">
+            <div class="col-8">
+                <div class="blog-image-container">
+                    <img src="https://cdn0-production-images-kly.akamaized.net/XXLs0zetMBHQgDoIM8CSeVrzE58=/640x360/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/921472/original/029028900_1436263117-ultraman-background-hd.jpg" alt=""
+                        class="blog-image-img">
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="download-section">
+                    <h3>Duration</h3>
+                    <p><i class="fas fa-calendar-alt"></i>{{this.startDate}}-{{this.endDate}}</p>
+                    <p><i class="far fa-clock"></i>Durasi: {{this.duration}} bulan</p>
+                </div>
+
+                <div class="social-icon-container">
+                    <h3>Technologies</h3>
+                    <div class="row">
+                        <div class="col-6">
+                            <p class="cc-{{this.reactJs}}"><i class="fab fa-react"></i>React Js</p>
+                            <p class="cc-{{this.nodeJs}}"><i class="fab fa-node-js"></i>Node Js</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="cc-{{this.javascript}}"><i class="fab fa-js-square "></i>Javascript</p>
+                            <p class="cc-{{this.android}}"><i class="fab fa-android "></i>android</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <p class="justify blog-description">{{this.content}}</p>
+        <p class="justify blog-description">{{this.content}}</p>
+        <p class="justify blog-description">{{this.content}}</p>
+    </div>
+
+
+
+</body>
+
+</html>
